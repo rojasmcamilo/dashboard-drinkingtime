@@ -2,6 +2,8 @@ import React from "react";
 import ".././assets/css/app.css";
 import SideBar from "./SideBar";
 import Products from "./products/products";
+import ProductsPrice from "./products/productsPrice";
+import Users from "./users/users";
 
 function App() {
   return (
@@ -100,7 +102,7 @@ function App() {
                           Amount in products
                         </div>
                         <div className="h5 mb-0 font-weight-bold text-gray-800">
-                          $546.456
+                          <ProductsPrice />
                         </div>
                       </div>
                       <div className="col-auto">
@@ -117,10 +119,10 @@ function App() {
                     <div className="row no-gutters align-items-center">
                       <div className="col mr-2">
                         <div className="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                          Users quantity
+                          Cantidad de usuarios
                         </div>
                         <div className="h5 mb-0 font-weight-bold text-gray-800">
-                          38
+                          <Users />
                         </div>
                       </div>
                       <div className="col-auto">

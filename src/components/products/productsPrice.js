@@ -1,28 +1,30 @@
 import React, { Component } from "react";
 
-class Products extends Component {
-  constructor(props) {
-    super(props);
+class ProductsPrice extends Component {
+  constructor() {
+    super();
     this.state = {
       data: [],
-      isLoaded: false,
     };
   }
 
   componentDidMount() {
     fetch("http://localhost:3000/api/products")
       .then((res) => res.json())
-      .then((json) => {
+      .then((data) => {
         this.setState({
-          isLoaded: true,
-          data: json.length,
+          data: data,
         });
       });
   }
 
   render() {
-    return <div className="Products">{this.state.data}</div>;
+    return (
+      <div className="Products">
+        {this.state.data.map((data) => data.price)}
+      </div>
+    );
   }
 }
 
-export default Products;
+export default ProductsPrice;

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Products extends Component {
+class Users extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,7 +10,7 @@ class Products extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/api/products")
+    fetch("http://localhost:3000/api/users")
       .then((res) => res.json())
       .then((json) => {
         this.setState({
@@ -25,4 +25,4 @@ class Products extends Component {
   }
 }
 
-export default Products;
+export default Users;
