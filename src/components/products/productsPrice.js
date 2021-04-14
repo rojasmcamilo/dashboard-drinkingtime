@@ -21,7 +21,11 @@ class ProductsPrice extends Component {
   render() {
     return (
       <div className="Products">
-        {this.state.data.map((data) => data.price)}
+        {this.state.data.map((data) =>
+          data.price.reduce(function (acum, num) {
+            return acum + num;
+          })
+        )}
       </div>
     );
   }
