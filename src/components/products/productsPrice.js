@@ -5,6 +5,7 @@ class ProductsPrice extends Component {
     super();
     this.state = {
       data: [],
+      price: [],
     };
   }
 
@@ -14,20 +15,14 @@ class ProductsPrice extends Component {
       .then((data) => {
         this.setState({
           data: data,
+          price: data.map((data) => data.price),
         });
       });
   }
 
   render() {
-    return (
-      <div className="Products">
-        {this.state.data.map((data) =>
-          data.price.reduce(function (acum, num) {
-            return acum + num;
-          })
-        )}
-      </div>
-    );
+    console.log(this.state.price);
+    return <div className="Products">{}</div>;
   }
 }
 
