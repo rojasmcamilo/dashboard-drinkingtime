@@ -4,7 +4,7 @@ import SideBar from "./SideBar";
 import Products from "./products/products";
 import ProductsPrice from "./products/productsPrice";
 import Users from "./users/users";
-import Lastproduct from "./LastProduct/LastProduct";
+import Last from "./LastProduct";
 
 function App() {
   return (
@@ -137,7 +137,7 @@ function App() {
 
             <div className="row">
 
-            <Lastproduct/>
+            <Last/>
 
               <div className="col-lg-6 mb-4">
                 <div className="card shadow mb-4">
