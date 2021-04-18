@@ -21,6 +21,7 @@ class ProductsPrice extends Component {
   }
 
   render() {
+    console.log(this.state.price);
     return <div className="Products">{}</div>;
   }
 }

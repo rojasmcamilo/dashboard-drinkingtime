@@ -1,28 +1,32 @@
-import React, { useEffect } from "react";
-import Last from "./LastProduct";
+import React, { useEffect } from 'react';
+import LastProduct from './LastProduct'
 
-function UltimoProducto() {
-  const [Producto, setProducto] = useState(0);
+function UltimoProducto(){
 
-  useEffect(() => {
-    fetch("http://localhost:3000/api/products")
-      .then((res) => {
-        res.json();
-        console.log(res);
-      })
-      .res((data) => {
-        let ultimo = data[data.lenght - 1];
-        setProducto(ultimo);
-      });
-  }, []);
+    const [Producto, setProducto] = useState(0);
 
-  return (
-    <LastProduct
-      name={Producto.name}
-      detail={Producto.product_detail}
-      category={Producto.price}
-    />
-  );
+    useEffect( ()=> {
+        fetch("http://localhost:3000/api/products")
+        .then(res => res.json()
+        console.log(res) )
+        .res(data=>{
+            let ultimo = data[data.lenght-1]
+            setProducto(ultimo)
+        })
+    }, [])
+
+        return(
+            <LastProduct
+
+                name = {Producto.name}
+                detail = {Producto.product_detail}
+                category ={Producto.price}
+
+            />
+
+        )
+
 }
 
-export default UltimoProducto;
+
+export default LastProduct;
