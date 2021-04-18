@@ -5,18 +5,17 @@ import Products from "./products/products";
 import ProductsPrice from "./products/productsPrice";
 import Users from "./users/users";
 import Last from "./LastProduct";
-import Categories from "./Categories"
-import Header from "./Header"
+import Categories from "./Categories";
+import Header from "./Header";
 
 function App() {
   return (
     <>
-      <SideBar/>
+      <SideBar />
 
       <div id="content-wrapper" className="d-flex flex-column">
         <div id="content">
-          
-          <Header/>
+          <Header />
 
           <div className="container-fluid">
             <div className="d-sm-flex align-items-center justify-content-between mb-4">
@@ -88,11 +87,8 @@ function App() {
             </div>
 
             <div className="row">
-
-            <Last/>
-            <Categories/>
-
-              
+              <Last />
+              <Categories />
             </div>
           </div>
         </div>

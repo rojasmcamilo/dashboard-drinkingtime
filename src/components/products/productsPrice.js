@@ -15,14 +15,18 @@ class ProductsPrice extends Component {
       .then((data) => {
         this.setState({
           data: data,
-          price: data.map((data) => data.price),
+          price: data
+            .map((data) => data.price)
+            .reduce(function (acum, num) {
+              return acum + num;
+            }),
         });
       });
   }
 
   render() {
     console.log(this.state.price);
-    return <div className="Products">{}</div>;
+    return <div className="Products">$ {this.state.price}</div>;
   }
 }
 
