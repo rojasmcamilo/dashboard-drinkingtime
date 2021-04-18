@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Lastproduct(props){
+function LastProduct(props){
     return(
        
               <div className="col-lg-6 mb-4">
@@ -16,7 +16,7 @@ function Lastproduct(props){
                       <img
                         className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                         style={{ width: "25rem" }}
-                        src="assets/images/product_dummy.svg"
+                        src={"http://localhost:3000/images/" + props.image }
                         alt="dummy"
                       />
                     </div>
@@ -24,9 +24,7 @@ function Lastproduct(props){
                       {props.detail}
                     </p>
                     <p> {props.category} </p>
-                    <a target="_blank" rel="nofollow" href="/">
-                      View product detail
-                    </a>
+                    <a href={"http://localhost:3000/products/" + props.id}>Detalle de producto</a>
                   </div>
                 </div>
             </div>
@@ -35,4 +33,4 @@ function Lastproduct(props){
 
 };
 
-export default Lastproduct;
+export default LastProduct;
