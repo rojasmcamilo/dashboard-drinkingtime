@@ -5,66 +5,18 @@ import Products from "./products/products";
 import ProductsPrice from "./products/productsPrice";
 import Users from "./users/users";
 import Last from "./LastProduct";
+import Categories from "./Categories"
+import Header from "./Header"
 
 function App() {
   return (
     <>
-      <SideBar />
+      <SideBar/>
 
       <div id="content-wrapper" className="d-flex flex-column">
         <div id="content">
-          <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-            <button
-              id="sidebarToggleTop"
-              className="btn btn-link d-md-none rounded-circle mr-3"
-            >
-              <i className="fa fa-bars"></i>
-            </button>
-
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item dropdown no-arrow mx-1">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="/"
-                  id="alertsDropdown"
-                >
-                  <i className="fas fa-bell fa-fw"></i>
-                  <span className="badge badge-danger badge-counter">3+</span>
-                </a>
-              </li>
-
-              <li className="nav-item dropdown no-arrow mx-1">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="/"
-                  id="messagesDropdown"
-                >
-                  <i className="fas fa-envelope fa-fw"></i>
-                  <span className="badge badge-danger badge-counter">7</span>
-                </a>
-              </li>
-
-              <div className="topbar-divider d-none d-sm-block"></div>
-
-              <li className="nav-item dropdown no-arrow">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="/"
-                  id="userDropdown"
-                >
-                  <span className="mr-2 d-none d-lg-inline text-gray-600 small">
-                    Walter White
-                  </span>
-                  <img
-                    className="img-profile rounded-circle"
-                    src="assets/images/dummy-avatar.jpg"
-                    width="60"
-                    alt="avatar"
-                  />
-                </a>
-              </li>
-            </ul>
-          </nav>
+          
+          <Header/>
 
           <div className="container-fluid">
             <div className="d-sm-flex align-items-center justify-content-between mb-4">
@@ -100,7 +52,7 @@ function App() {
                       <div className="col mr-2">
                         <div className="text-xs font-weight-bold text-success text-uppercase mb-1">
                           {" "}
-                          Amount in products
+                          Valor en productos
                         </div>
                         <div className="h5 mb-0 font-weight-bold text-gray-800">
                           <ProductsPrice />
@@ -138,50 +90,9 @@ function App() {
             <div className="row">
 
             <Last/>
+            <Categories/>
 
-              <div className="col-lg-6 mb-4">
-                <div className="card shadow mb-4">
-                  <div className="card-header py-3">
-                    <h6 className="m-0 font-weight-bold text-primary">
-                      Categories in Data Base
-                    </h6>
-                  </div>
-                  <div className="card-body">
-                    <div className="row">
-                      <div className="col-lg-6 mb-4">
-                        <div className="card bg-info text-white shadow">
-                          <div className="card-body">Category 01</div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 mb-4">
-                        <div className="card bg-info text-white shadow">
-                          <div className="card-body">Category 02</div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 mb-4">
-                        <div className="card bg-info text-white shadow">
-                          <div className="card-body">Category 03</div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 mb-4">
-                        <div className="card bg-info text-white shadow">
-                          <div className="card-body">Category 04</div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 mb-4">
-                        <div className="card bg-info text-white shadow">
-                          <div className="card-body">Category 05</div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 mb-4">
-                        <div className="card bg-info text-white shadow">
-                          <div className="card-body">Category 06</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>

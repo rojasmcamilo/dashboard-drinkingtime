@@ -21,16 +21,8 @@ class ProductsPrice extends Component {
   }
 
   render() {
-<<<<<<< HEAD
-    return (
-      <div className="Products">
-        
-      </div>
-    );
-=======
     console.log(this.state.price);
     return <div className="Products">{}</div>;
->>>>>>> 27e18725e2c4cae1330b5b8dc0bfd94fcb2ae7f8
   }
 }
 
