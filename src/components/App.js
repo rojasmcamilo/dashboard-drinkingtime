@@ -7,6 +7,7 @@ import Users from "./users/users";
 import Last from "./LastProduct";
 import Categories from "./Categories";
 import Header from "./Header";
+import LastUser from "./LastUser";
 
 function App() {
   return (
@@ -88,6 +89,7 @@ function App() {
 
             <div className="row">
               <Last />
+              <LastUser />
               <Categories />
             </div>
           </div>
